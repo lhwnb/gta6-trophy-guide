@@ -1,36 +1,82 @@
-// A working gta6-trophy-guide-01 entry (Node 22, standard library only): the guide is this directory's app/ folder,
-// plain static files a browser opens at app/index.html (ES modules, CSS, no build step), offline: it loads nothing
-// over the network, and its trophy list and guides are app/data/trophies.json. The program hands it in: it copies app/
-// and screenshots/ from beside this file to /output and writes /output/dossier.json, the summary the judge reads (your
-// screenshots, the first load's files and bytes, and your source), with the vendored make.fun library. Leave
-// vendor/makefun-frontend.ts as it is: the scorer requires dossier.json to be byte for byte what its own copy writes.
+// trophy-guide entry point: packs this directory's static guide for the judge.
 //
-// Only the plumbing, not a winner: a plain checklist of the 55 trophies with a one-line hint each. Write a real guide
-// for every trophy in your own words, a roadmap to the platinum, filters and a spoiler setting in app/, put 3 or 4 PNG
-// or JPEG screenshots of it in screenshots/ (the first by name is the cover; shots.json says which views this
-// starter's were taken of), and run it.
+// The guide itself is app/ (plain HTML, CSS and ES modules that a browser
+// opens at app/index.html with no build step and no network) plus the PNG
+// shots in screenshots/. This program copies both beside the output root and
+// writes dossier.json there: the scorer's view of the entry, built by the
+// vendored library in vendor/makefun-frontend.ts, which must stay untouched
+// because dossier.json has to be byte-for-byte what the scorer's own copy of
+// that library produces.
 //
-// Serve it locally with `node serve.ts`, then open http://localhost:8080.
-// Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
-//   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
+// The output root is MAKEFUN_OUTPUT_DIR, or /output inside the grader's
+// container:  MAKEFUN_OUTPUT_DIR=out node main.ts
+// Node 22, standard library only, no network, nothing written outside the
+// output root.
 
-import { cpSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { copyFileSync, existsSync, mkdirSync, readdirSync, writeFileSync } from 'node:fs';
+import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildDossier } from './vendor/makefun-frontend.ts';
 
-const here = fileURLToPath(new URL('.', import.meta.url));
-const out = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
+/** This program's own directory: app/, screenshots/ and vendor/ live beside it. */
+const SOURCE_ROOT = dirname(fileURLToPath(import.meta.url));
 
-mkdirSync(out, { recursive: true });
-cpSync(join(here, 'app'), join(out, 'app'), { recursive: true });
-mkdirSync(join(out, 'screenshots'), { recursive: true });
-if (existsSync(join(here, 'screenshots'))) cpSync(join(here, 'screenshots'), join(out, 'screenshots'), { recursive: true });
+/**
+ * The caps the scorer applies (reference/gate.json). Only text_max_bytes
+ * shapes the dossier's bytes; the rest make buildDossier refuse exactly what
+ * the scorer would refuse, rather than shipping an entry that dies there.
+ */
+const CAPS = {
+  text_max_bytes: 163840,
+  screenshots: { max: 4, max_bytes: 262144 },
+  app_max_files: 993,
+  app_max_bytes: 50331648,
+  app_path_max_bytes: 1000,
+};
 
-// The scorer's own caps (reference/gate.json): only text_max_bytes shapes the bytes; the others refuse an entry the
-// scorer would refuse (more than 4 screenshots or one over 256 KiB; more than 993 files and directories in app/ or
-// 48 MiB of app files: app/ counts beside /output's own 1000-entry cap, its screenshots/ and dossier.json).
-writeFileSync(
-  join(out, 'dossier.json'),
-  buildDossier(out, { text_max_bytes: 163840, screenshots: { max: 4, max_bytes: 262144 }, app_max_files: 993, app_max_bytes: 50331648 }),
-);
+/** Where the packaged entry goes: the environment's override, else the container's /output. */
+function outputRoot(): string {
+  return process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
+}
+
+/** Recursive directory copy, one plain file at a time (no globs, no links). */
+function copyTree(from: string, to: string): void {
+  mkdirSync(to, { recursive: true });
+  for (const entry of readdirSync(from, { withFileTypes: true })) {
+    const src = join(from, entry.name);
+    const dst = join(to, entry.name);
+    if (entry.isDirectory()) copyTree(src, dst);
+    else copyFileSync(src, dst);
+  }
+}
+
+/** Ship the guide: every file under app/, keeping its relative path. */
+function copyApp(out: string): void {
+  copyTree(join(SOURCE_ROOT, 'app'), join(out, 'app'));
+}
+
+/** Ship the screenshots, and leave the directory present even when there are none yet. */
+function copyScreenshots(out: string): void {
+  const from = join(SOURCE_ROOT, 'screenshots');
+  const to = join(out, 'screenshots');
+  mkdirSync(to, { recursive: true });
+  if (existsSync(from)) copyTree(from, to);
+}
+
+/** Build dossier.json in the output root and return the size written. */
+function writeDossier(out: string): number {
+  const bytes = buildDossier(out, CAPS);
+  writeFileSync(join(out, 'dossier.json'), bytes);
+  return bytes.length;
+}
+
+function main(): void {
+  const out = outputRoot();
+  mkdirSync(out, { recursive: true });
+  copyApp(out);
+  copyScreenshots(out);
+  const dossierBytes = writeDossier(out);
+  console.log(`trophy-guide: app/ + screenshots/ -> ${out}, dossier.json ${dossierBytes} bytes`);
+}
+
+main();
