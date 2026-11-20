@@ -1,0 +1,94 @@
+{
+  "intro": "Nine of the fifty-five can be lost, and five of those are lost at a chapter card with no warning prompt. Each entry below carries the lock point, what to do before it, and how to recover if you have already crossed it. The checklist's missables filter uses this file; the spoiler switch blurs the story detail in each entry.",
+  "footNote": "The other 46 stay open after the credits -- that is what the cleanup stage is for. Lock points are checked against the chapter card and the mission start.",
+  "checkpointAdvice": "Keep one manual save you only overwrite at the start of a chapter. That save is the difference between a 70-hour platinum and a 90-hour one.",
+  "entries": [
+    {
+      "id": 20,
+      "flag": "Chapter 1 only",
+      "lockPoint": "Locks when Chapter 3 opens",
+      "lockDetail": "Cal Hampton moves from Key Lento to Port Gellhorn and the marina challenge disappears from the map with him.",
+      "action": "Beat Cal's five-keeper fishing challenge at dawn before you take the Chapter 1 card.",
+      "recovery": "Manual save from Chapter 2. The challenge cannot be replayed and no stranger job re-offers it.",
+      "severity": "high"
+    },
+    {
+      "id": 22,
+      "flag": "Chapter 2-4 only",
+      "lockPoint": "Locks at the end of Chapter 4",
+      "lockDetail": "Andy's halfway house closes and the Second Chances strand leaves the map for good.",
+      "action": "Finish Andy's four jobs, including the drive to the Port Gellhorn clinic, before the Chapter 4 card.",
+      "recovery": "Manual save from before Chapter 4's last mission.",
+      "severity": "high"
+    },
+    {
+      "id": 23,
+      "flag": "Must precede VCIA",
+      "lockPoint": "Locks at VCIA Takedown in Chapter 3",
+      "lockDetail": "The airport shutdown closes Kenton's boatyard, and his strand has no other entry point.",
+      "action": "Run Kenton's three salvage jobs and the Seven-Mile Bridge chase during Chapter 2, before the airport job.",
+      "recovery": "Manual save from before VCIA Takedown. The strand cannot be replayed.",
+      "severity": "high"
+    },
+    {
+      "id": 24,
+      "flag": "Chapter 2 only",
+      "lockPoint": "Locks at the Chapter 3 card",
+      "lockDetail": "Billy is arrested at the end of Chapter 3 and his courier strand is removed from the map.",
+      "action": "Find Billy inside the Rusty Anchor in Port Gellhorn after Breakfast Run, then finish the bar fight and the salvage yard chase.",
+      "recovery": "Manual save from Chapter 2 or early Chapter 3.",
+      "severity": "high"
+    },
+    {
+      "id": 26,
+      "flag": "Chapter 4 only",
+      "lockPoint": "Locks at the end of Chapter 4",
+      "lockDetail": "Randy's camp is raided and his marker disappears with the chapter.",
+      "action": "Finish Randy's supply runs and the quarry handoff before the Chapter 4 card.",
+      "recovery": "Manual save from the start of Chapter 4.",
+      "severity": "medium"
+    },
+    {
+      "id": 27,
+      "flag": "Before the finale",
+      "lockPoint": "Locks when the final mission starts",
+      "lockDetail": "Tyrone leaves Leonida after the credits and El Cotorro loses his marker.",
+      "action": "Finish the three car thefts and the Port of Vice City swap before starting the last mission.",
+      "recovery": "Manual save from before the final mission. This is the tightest window in the list.",
+      "severity": "high"
+    },
+    {
+      "id": 29,
+      "flag": "Chapter 4 only",
+      "lockPoint": "Locks at the end of Chapter 4",
+      "lockDetail": "Bret packs up his camp west of the Mud Club, taking the unique animal with him.",
+      "action": "Finish Bret's three trophy hunts, then track the ghost panther on a night run with the bow.",
+      "recovery": "Manual save from the start of Chapter 4.",
+      "severity": "medium"
+    },
+    {
+      "id": 47,
+      "flag": "Mid-mission",
+      "lockPoint": "Locks inside Headliners, before the first wave",
+      "lockDetail": "The balcony prompt is only live before the attack starts, and the mission replay does not re-arm it.",
+      "action": "Take the photograph on the Vice Beach arena balcony with both protagonists as soon as Headliners starts.",
+      "recovery": "Manual save from before Headliners. Replay will not give the prompt back.",
+      "severity": "high"
+    },
+    {
+      "id": 50,
+      "flag": "Chapter 4, clear night",
+      "lockPoint": "Locks at the end of Chapter 4",
+      "lockDetail": "The Grassrivers light only appears on a clear night during Chapter 4, and it takes the eighth stranger strand with it.",
+      "action": "Drive the pumping station road at night with clear weather, stop when the radio cuts out, and follow the light to the third marker post.",
+      "recovery": "Manual save from the start of Chapter 4, or sleep at the Mud Club until the weather clears if the chapter is still open.",
+      "severity": "medium"
+    }
+  ],
+  "notMissable": [
+    "Every story trophy: the missions stay in Pause > Game > Replay Mission after the credits.",
+    "Every hobby and collectible counter: shooting ranges, Top Fun, races, cards, WAiNK, meditations, areas and stunts all survive the credits.",
+    "The crimes: bank vaults, gang operations, armored trucks and shops stay on the map in free roam.",
+    "Actions Speak Louder and Bad Luck, I Guess: both can be farmed after the credits, so a choice you regret costs nothing."
+  ]
+}

@@ -1,0 +1,302 @@
+{
+ "headline": "about 70 hours",
+ "headlineLong": "Platinum in about 70 hours, and nine of those hours are just driving",
+ "intro": "This roadmap runs the story once, in order, with the missable side jobs folded into the chapter they live in, and pushes everything that survives the credits into a single cleanup stage at the end. It assumes a first playthrough on normal difficulty, no guides for the missions themselves, and no second run: nothing in the list is difficulty gated and nothing needs another player, so 70 hours is one careful pass rather than a speedrun plus a replay.",
+ "assumptions": [
+  "Normal difficulty, one playthrough, no mission skips",
+  "Side content done as it appears, not saved for after the credits",
+  "Manual saves kept before every missable checkpoint (nine of them)",
+  "No second playthrough: the nine missables are the only reason to replay anything"
+ ],
+ "first": {
+  "title": "Do this first",
+  "lead": "Four things before the second mission. All four save hours later.",
+  "items": [
+   "Turn on manual saves and keep a rolling slot before every chapter card. Nine trophies lock at chapter boundaries.",
+   "Read the missables view once: nine lines, and the difference between a 70-hour and a 95-hour platinum.",
+   "No garages or car mods in Chapter 1. Money is tight until the first vault opens in Chapter 3.",
+   "Play stranger jobs as they appear: Andy, Kenton, Billy, Randy and Tyrone close their strands at a chapter boundary."
+  ]
+ },
+ "stages": [
+  {
+   "id": "s0",
+   "name": "Stage 0 -- Before the first mission",
+   "hours": 0.5,
+   "window": "Settings and habits",
+   "summary": "Set the game up so that a single pass is enough. Nothing here is a trophy; everything here decides whether you need a second run.",
+   "short": "Settings, manual saves, and the nine lock points read once.",
+   "risk": "none",
+   "missable": [],
+   "todo": [
+    "Settings > Gameplay > Manual Saves on. Keep save slot 1 as the rolling chapter save and slot 2 as the missable checkpoint.",
+    "Leave the tutorial prompts on. The casting, driving and shooting tutorials are the only free explanation of the mechanics the guides below assume.",
+    "Check Pause > Stats > Trophies once so you know where the in-game counters live. They are more reliable than the console trophy list for partial progress.",
+    "Decide now: one playthrough, missables handled in chapter. Write the nine lock points down if you are not using the missables view."
+   ],
+   "trophies": [],
+   "trophyNames": [],
+   "count": 0
+  },
+  {
+   "id": "s1",
+   "name": "Stage 1 -- Chapter 1, the Keys",
+   "hours": 9,
+   "window": "Gone Fishing to the Chapter 1 card",
+   "summary": "The tutorial chapter does the teaching, then hands you the first open stretch of Leonida: Cal's marina on Key Lento, Brian Heder's gun runs out of Port Gellhorn, and the first Vice Beach trips for Lucia's parole. Four trophies, one missable, and the first real decision about money.",
+   "short": "Gone Fishing, Breakfast Run, Cal's fishing challenge, chapter card.",
+   "risk": "Baited My Tackle is the only thing that dies here, and it dies quietly: Cal leaves without a warning prompt.",
+   "missable": [
+    20
+   ],
+   "todo": [
+    "Gone Fishing, then Breakfast Run with Brian Heder. Both are story jobs and neither can be missed.",
+    "Do Cal's fishing challenge before the Chapter 1 card. Baited My Tackle is the chapter's only missable and the challenge disappears when Cal moves inland.",
+    "Start the activity tour here: golf at Vice Beach Links, tennis at Starfish Island, bowling at Kolt & Associates, darts at the Rusty Anchor. None of them are trophies yet, but they feed Master of None later.",
+    "Keep $5,000 in the bank and do not buy a garage. The Keys garage is the cheapest of the eight and it is still a Chapter 2 purchase.",
+    "Take the Chapter 1 card. Paradise Lost pops with it."
+   ],
+   "trophies": [
+    2,
+    8,
+    20,
+    3
+   ],
+   "trophyNames": [
+    "Just Like Paradise",
+    "Trust",
+    "Baited My Tackle",
+    "Paradise Lost"
+   ],
+   "count": 4
+  },
+  {
+   "id": "s2",
+   "name": "Stage 2 -- Chapter 2, Ambrosia",
+   "hours": 11,
+   "window": "Chapter 2 card to the chapter's silo job",
+   "summary": "The map opens inland and the trophy list gets busy: three stranger strands, the first heist, the arcade, the bowling alley, and the cocktail on Ocean Beach. This is also where players lose two trophies by leaving the strands until later.",
+   "short": "Cartel Heist, the three closing strands, arcade, bowling, cocktail.",
+   "risk": "Three strands close here. Billy is the one people miss: his marker is inside the Rusty Anchor, not on the street, and it does not appear until Breakfast Run is done.",
+   "missable": [
+    22,
+    23,
+    24
+   ],
+   "todo": [
+    "The Cartel Heist and Child's Play first: they unlock the garage properties and the red gang operation markers.",
+    "Run Andy's strand, Kenton's strand and Billy's strand inside this chapter. Road to Rehabilitation, This Was No Boat Accident and The Lone Rider all lock on a chapter boundary.",
+    "Kenton's strand has to be done before VCIA Takedown in Chapter 3. The airport lockdown closes his yard permanently.",
+    "Clean up the small ones while you are in Vice City anyway: bowling at Kolt & Associates, the arcade cabinet on the Ocean Beach pier, the rooftop cocktail, a melee drive-by on the docks.",
+    "Rob three shops back to back in Port Gellhorn for Retail Therapy, then take the Chapter 2 card for T**s Ass Drug Money."
+   ],
+   "trophies": [
+    9,
+    10,
+    4,
+    22,
+    23,
+    24,
+    46,
+    21,
+    44,
+    51,
+    34
+   ],
+   "trophyNames": [
+    "Break the Bank",
+    "Family Matters",
+    "T**s Ass Drug Money",
+    "Road to Rehabilitation",
+    "This Was No Boat Accident",
+    "The Lone Rider",
+    "Let’s Go Bowling",
+    "Stick Fiddler",
+    "In The Beginning…",
+    "Ten Pin",
+    "Retail Therapy"
+   ],
+   "count": 11
+  },
+  {
+   "id": "s3",
+   "name": "Stage 3 -- Chapter 3, Vice City",
+   "hours": 13,
+   "window": "Chapter 3 card to the Downtown rooftop",
+   "summary": "The biggest stage and the one with the most trophies: Headliners, the airport, five bank vaults, the jewelry store, the armored truck, the shooting ranges, Top Fun, the races and the wanted-level escape. Fifteen trophies and two missables, one of which is a photograph taken mid-mission.",
+   "short": "Headliners photo, five vaults, VCIA last, ranges, Top Fun, races.",
+   "risk": "Personal Best is a mid-mission photo with no second chance. Everything else in this stage survives its own chapter.",
+   "missable": [
+    47
+   ],
+   "todo": [
+    "Headliners first, and take the balcony photo before the first wave. Personal Best locks inside the mission and the replay does not re-arm the prompt.",
+    "Start the bank vaults as soon as Raul introduces the crew. Five vaults is a silver, and the marked bills feed launder $250,000 and the eight garages.",
+    "VCIA Takedown last in this chapter: it shuts the airport, which makes the unscheduled departure trophy harder and Kenton's strand impossible.",
+    "Work the hobby counters between jobs: 42 shooting range golds, 14 Top Fun wins, 20 races. They are all in Vice City and Downtown, so the travel is short.",
+    "Get the four-star escape and a five-kill Combat Focus out of the way in Little Havana, where the gang operations give you crowds.",
+    "Take the Chapter 3 card for Vice City, Baby!."
+   ],
+   "trophies": [
+    11,
+    12,
+    5,
+    47,
+    39,
+    45,
+    41,
+    40,
+    33,
+    36,
+    37,
+    17,
+    18,
+    19,
+    52
+   ],
+   "trophyNames": [
+    "DWNFALL",
+    "Hi-Jacked",
+    "Vice City, Baby!",
+    "Personal Best",
+    "Sneakthief",
+    "Capital Offense",
+    "A Classic Blitz Play",
+    "Maximum Withdrawal",
+    "Hot Together",
+    "Gunslinger",
+    "Catch Me If You Can",
+    "The Shootist",
+    "Top Fun",
+    "Earn Cash, Not Kudos",
+    "Dime on the Dollar"
+   ],
+   "count": 15
+  },
+  {
+   "id": "s4",
+   "name": "Stage 4 -- Chapter 4, Grassrivers",
+   "hours": 10,
+   "window": "Chapter 4 card to the Savage Glory debrief",
+   "summary": "The shortest story act and the densest three hours of missables in the game: Randy, Bret, the eighteen meditations, the Rhino, the swamp light and the last three races. Nine trophies, three of them with a hard lock.",
+   "short": "Rhino in the raid, Randy, Bret's panther, meditations, swamp light.",
+   "risk": "Three locks at the Chapter 4 card, and two of them need clear weather or a prior strand finished. Start this stage with a manual save.",
+   "missable": [
+    26,
+    29,
+    50
+   ],
+   "todo": [
+    "Savage Glory is the anchor. Steal the Rhino during the mission while the depot is already alerted; setting that up afterwards is far more work.",
+    "Randy's strand, Bret's hunt and the ghost panther all have to be finished before the chapter card. That includes Bret's three trophy hunts before the panther will track.",
+    "Meditate at the eighteen mats as you cross the Grassrivers. Two are on Mount Kalaga and one is behind the Ambrosia grain silo, which is the one everyone finishes 17/18 on.",
+    "Take the swamp light on a clear night before the chapter ends. It is also the eighth stranger strand, so it completes Strangers & Freaks at the same time.",
+    "Finish the off-road races at the Mud Club, then take the Chapter 4 card for Top Of The World, Ma."
+   ],
+   "trophies": [
+    13,
+    6,
+    25,
+    26,
+    28,
+    29,
+    32,
+    38,
+    50
+   ],
+   "trophyNames": [
+    "Snow Storm",
+    "Top Of The World, Ma",
+    "Strangers & Freaks",
+    "Supply & Demand",
+    "Positive Mental Attitude",
+    "Fair Game",
+    "One Last Thing",
+    "Challenging Tank",
+    "The Truth Is Out There"
+   ],
+   "count": 9
+  },
+  {
+   "id": "s5",
+   "name": "Stage 5 -- The finale",
+   "hours": 3,
+   "window": "The final mission and the credits",
+   "summary": "One mission, three phases, and the last two story trophies. Tyrone's strand closes behind the credits, so finish him before you start the job.",
+   "short": "Tyrone's strand first, then the final mission. Nothing else closes.",
+   "risk": "Tyrone's strand is the only lock, and it locks the moment the final mission starts, not at the credits.",
+   "missable": [
+    27
+   ],
+   "todo": [
+    "Finish Tyrone's strand at El Cotorro first. Spin On This! is gone once the final mission starts.",
+    "Carry the Carbine Rifle and full armour into the finale, and park a fast car outside the safehouse for the boat run.",
+    "The ending choice does not affect any trophy. Play it however you like; the gold pops on the last cutscene either way.",
+    "If you have not made fifty choices yet, the finale has several. Actions Speak Louder usually lands here without trying.",
+    "Watch the credits through once. The post-game free roam unlock and the 100% checklist both appear afterwards."
+   ],
+   "trophies": [
+    7,
+    27,
+    48,
+    49
+   ],
+   "trophyNames": [
+    "You Gotta Know When to Get Off",
+    "Spin On This!",
+    "Actions Speak Louder",
+    "Bad Luck, I Guess"
+   ],
+   "count": 4
+  },
+  {
+   "id": "s6",
+   "name": "Stage 6 -- Cleanup to 100%",
+   "hours": 23,
+   "window": "Post-game free roam",
+   "summary": "Everything left needs the whole map and both protagonists, so it all belongs here: the 250 stunts, the 52 areas, the cards, WAiNK, the nine gangs, the eight garages, the vehicle list and the final 100% checklist. This is the long tail, and it is where the platinum actually happens.",
+   "short": "250 stunts, 52 areas, cards, WAiNK, nine gangs, the 100% checklist.",
+   "risk": "Nothing is missable after the credits. This stage is long, not dangerous.",
+   "missable": [],
+   "todo": [
+    "Open Pause > Stats > Completion and treat it as the master list. A trophy counter at 54/55 means one category is short, not one trophy.",
+    "Sweep by district, not by trophy: areas and stunts share roads, and cards and WAiNK share landmarks. One pass through Vice City covers four trophies.",
+    "Buy the eight garages with the vault money. They also unlock the car slots you want for the vehicle list and the Scooter Bros registrations.",
+    "Finish the last card sets and the last WAiNK spots with the map filters, not by memory. Both counters are per-set, so a set at nine of ten reads as empty.",
+    "The 250th stunt is usually the last checklist line. Platinum and A Long Road land on the same screen."
+   ],
+   "trophies": [
+    1,
+    14,
+    15,
+    16,
+    30,
+    31,
+    35,
+    42,
+    43,
+    53,
+    54,
+    55
+   ],
+   "trophyNames": [
+    "Vice Got a Price!",
+    "A Long Road",
+    "Cunning Stunts",
+    "Master of None",
+    "Don't Touch My Deck",
+    "You WAiNKer!",
+    "Whip It Good",
+    "The Goodtime State",
+    "Pest Control",
+    "Treat Yo Self",
+    "Little Boxes",
+    "On the Spot"
+   ],
+   "count": 12
+  }
+ ],
+ "totalHours": 69.5,
+ "hoursNote": "Stage hours: 0.5 + 9 + 11 + 13 + 10 + 3 + 23 = 69.5 hours, so the roadmap claims about 70 hours for the platinum on one careful playthrough. A second playthrough to recover a missable adds roughly 20 hours, which is why the missables view exists.",
+ "orderNote": "Recommended order is the stage order, then the order inside each stage. The checklist's sort control follows this list: trophies earlier in the roadmap sit higher."
+}
